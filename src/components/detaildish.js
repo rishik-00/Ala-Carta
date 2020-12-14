@@ -1,16 +1,9 @@
-import React,{ Component } from 'react';
+import React from 'react';
 import {Card,CardBody,CardImg,CardText,CardTitle} from 'reactstrap';
 import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/13.png";
-class DishDetail extends Component
-{
-    constructor(props)
-    {
-    
-        super(props);
 
-      
-    }
-    renderDish(dish)
+    
+     function RenderDish({dish})
     {
         return(<div className='row'>
         <Card>
@@ -27,7 +20,7 @@ class DishDetail extends Component
     </div>
 )
     }
-    renderComments(comments)
+     function RenderComments({comments})
     {  
             return(
 
@@ -50,10 +43,10 @@ class DishDetail extends Component
        
         
     }
-    render()
+   const DishDetail = (props) =>
     {
             
-            if(this.props.dish!=null)
+            if(props.dish!=null)
             {
                 
                 return(
@@ -61,36 +54,33 @@ class DishDetail extends Component
                     <div className="row">
                    
                     <div className="col-12">
-                        <h3>{this.props.dish.name}</h3>
+                        <h3>{props.dish.name}</h3>
                         <hr/>
                     </div>
                 </div>  
                     <div className='row'>
                         <div className='col-12 col-md-5 m-1'>
-                          {this.renderDish(this.props.dish)}
+                          <RenderDish dish ={props.dish} />
                         </div>
                         
                         <div className='col-12 col-md-5 m-1'>
-                            
-                               
-                            {this.renderComments(this.props.dish.comments)}
-                            
+                            <RenderComments comments = {props.dish.comments} />
                         </div>
                         
                     </div>
                     </div>
-                )
+                );
             }
             else
             {
                 
                 return(<div>
 
-                </div>)
+                </div>);
             }
        
     }
-}
+
 export default DishDetail;
 
 
