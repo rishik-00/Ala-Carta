@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
-import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/13.png";
+import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/13.jpg";
 import Dishdetail  from './detaildish';
 
 

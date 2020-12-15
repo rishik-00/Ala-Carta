@@ -1,4 +1,4 @@
-import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/13.png";
+
 export const DISHES =
     [
         {

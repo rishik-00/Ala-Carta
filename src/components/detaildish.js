@@ -1,6 +1,6 @@
 import React from 'react';
 import {Card,CardBody,CardImg,CardText,CardTitle} from 'reactstrap';
-import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/13.png";
+import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/13.jpg";
 
     
      function RenderDish({dish})
