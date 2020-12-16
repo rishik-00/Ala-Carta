@@ -2,6 +2,7 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/15.jpg";
+import '../App.css'
 
 
 function RenderLeader({ leader }) {
@@ -9,7 +10,7 @@ function RenderLeader({ leader }) {
         <div className="container">
             <div key={leader.id} className="col-12 mt-5">
                 <Media tag="li">
-                    <Media left middle>
+                    <Media left middle >
                         <Media object src={img} alt={leader.name}/>
                     </Media>
                     <Media body className="ml-5">
