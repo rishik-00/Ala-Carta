@@ -22,7 +22,7 @@ function RenderDish({dish})
     </div>
 )
     }
-     function RenderComments({comments})
+     function RenderComments({comments, addComment, dishId})
     {  
             
             const commentsTobeRendered = comments.map( (temp_comment, index) => {
@@ -37,7 +37,7 @@ function RenderDish({dish})
             <div>
                 <h4>Comments</h4>
                 {commentsTobeRendered}
-                <CommentForm />
+                <CommentForm dishId ={dishId} addComment = {addComment}/>
             </div>
         );
 
@@ -72,7 +72,9 @@ function RenderDish({dish})
                                 </div>
                             
                                 <div className='col-12 col-md-5 m-1'>
-                                    <RenderComments comments = {props.comments} />
+                                    <RenderComments comments = {props.comments} 
+                                        addComment = {props.addComment}
+                                        dishId = {props.dish.id}/>
                                 </div>
                             
                             </div>
@@ -107,8 +109,8 @@ class CommentForm extends Component {
   }
 
   handleSubmit(values){
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+    this.toggleModal();
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
         
     }
 
