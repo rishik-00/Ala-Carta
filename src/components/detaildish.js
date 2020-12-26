@@ -4,6 +4,7 @@ import { Card, CardImg, CardText, CardBody,
 import { Control, Errors, LocalForm } from 'react-redux-form';
 import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/13.jpg";
 import  { Link } from 'react-router-dom';
+import { Loading } from './loading';
 
 function RenderDish({dish})
     {
@@ -49,8 +50,26 @@ function RenderDish({dish})
     }
    const DishDetail = (props) =>
     {
-            
-            if(props.dish!=null)
+          if(props.isLoading) {
+            return (
+                <div className="container">
+                  <div className="row">
+                    <Loading />
+                  </div>
+                </div>
+              )
+          }
+          
+          else if (props.errmess){
+            return (
+                <div className="container">
+                  <div className="row">
+                    <h4>{props.errmess}</h4>
+                  </div>
+                </div>
+              )
+          }
+          else if(props.dish!=null)
             {
                 
                 return(
