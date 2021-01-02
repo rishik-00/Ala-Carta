@@ -3,13 +3,14 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle, Breadcrum
 import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/13.jpg";
 import { Link } from 'react-router-dom';
 import {Loading } from './loading';
+import { baseUrl } from '../shared/baseURL';
 
 function Rendermenu({dish, onClick}){
 		return(
 				<Card >
 					<Link to= {`/menu/${dish.id}`} >
 
-						<CardImg width='100%' src = {img} alt = {dish.name} />
+						<CardImg width='100%' src = {baseUrl + dish.image} alt = {dish.name} />
 						<CardImgOverlay>
 							<CardTitle>{dish.name}</CardTitle>
 						</CardImgOverlay>
