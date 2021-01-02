@@ -2,7 +2,6 @@ import React, { Component} from 'react';
 import { Card, CardImg, CardText, CardBody,
     CardTitle, Breadcrumb, BreadcrumbItem, Button, Modal,  ModalHeader, ModalBody, ModalFooter, Row, Label, Col  } from 'reactstrap';
 import { Control, Errors, LocalForm } from 'react-redux-form';
-import img from "C:/Users/Rishik/Desktop/Web/reactapp/src/shared/assets/13.jpg";
 import  { Link } from 'react-router-dom';
 import { Loading } from './loading';
 import { baseUrl } from '../shared/baseURL';
